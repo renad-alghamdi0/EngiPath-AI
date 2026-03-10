@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EngiPath AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;500;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-circle bg1"></div>
+  <div class="bg-circle bg2"></div>
+  <div class="bg-circle bg3"></div>
+
+  <main class="container">
+
+    <section class="brand-top">
+      <h2>EngiPath AI</h2>
+      <p>Renad Alshaer</p>
+    </section>
+
+    <section class="hero">
+      <h1>اكتشف أفكار مشاريع تناسب عمرك وشخصيتك</h1>
+      <p class="hero-text">
+        منصة ذكية تساعدك على اختيار أفكار مشاريع مناسبة حسب الفئة العمرية،
+        والاهتمامات، وطريقة التفكير، وأسلوب العمل، والمستوى الحالي.
+      </p>
+    </section>
+
+    <section class="about-grid">
+      <div class="info-card">
+        <h3>عن المشروع</h3>
+        <p>
+          IdeaPath AI نظام ذكي يساعد المستخدم على الوصول إلى أفكار مشاريع مناسبة له
+          بدل الحيرة والبحث الطويل، من خلال تحليل اهتماماته وخصائصه الأساسية.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>الرؤية</h3>
+        <p>
+          بناء منصة ذكية تجعل اختيار فكرة المشروع أسهل وأكثر وضوحًا لكل فئة عمرية،
+          وتساعد على دعم الإبداع والابتكار بطريقة عملية وجذابة.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>الأهداف</h3>
+        <p>
+          مساعدة المستخدمين على اختيار مشاريع مناسبة، وتقليل الحيرة، ودعم الإبداع،
+          وتقديم نقطة بداية واضحة مع معلومات تساعد على التنفيذ.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>المميزات</h3>
+        <p>
+          اقتراح أكثر من مشروع، تخصيص حسب العمر والاهتمام، عرض تفاصيل مفيدة،
+          وإظهار التقنيات المستخدمة والمهارات المكتسبة والقيمة من المشروع.
+        </p>
+      </div>
+    </section>
+
+    <section class="main-card">
+      <div class="card-title">
+        <h2>ابدأ الآن</h2>
+        <p>اختر بياناتك ليقترح لك النظام مشاريع مناسبة بشكل أدق</p>
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="ageGroup">الفئة العمرية</label>
+          <select id="ageGroup">
+            <option value="kids">أطفال</option>
+            <option value="teens">مراهقون</option>
+            <option value="youth" selected>شباب</option>
+            <option value="adults">بالغون</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="interest">المجال الذي تهتم به</label>
+          <select id="interest">
+            <option value="health">الصحة والرفاهية</option>
+            <option value="education">التعليم الذكي</option>
+            <option value="environment">البيئة والاستدامة</option>
+            <option value="business">ريادة الأعمال</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="thinking">نوع التفكير</label>
+          <select id="thinking">
+            <option value="creative">إبداعي</option>
+            <option value="analytical">تحليلي</option>
+            <option value="balanced" selected>متوازن</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="workstyle">طريقة العمل المفضلة</label>
+          <select id="workstyle">
+            <option value="solo">فردي</option>
+            <option value="team">ضمن فريق</option>
+            <option value="both" selected>الاثنان</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="level">المستوى الحالي</label>
+          <select id="level">
+            <option value="beginner">مبتدئ</option>
+            <option value="intermediate" selected>متوسط</option>
+            <option value="advanced">متقدم</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="button-area">
+        <button onclick="suggestProjects()">اقترح لي مشاريع مناسبة</button>
+      </div>
+    </section>
+
+    <section id="summaryBox" class="summary-box"></section>
+
+    <section id="result" class="projects-grid"></section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
